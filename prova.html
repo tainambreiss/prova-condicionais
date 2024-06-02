@@ -1,0 +1,52 @@
+// Faça um programa que peça o peso e a altura do usuário.
+// Calcule seu IMC e mostre qual é sua categoria segundo a tabela IMC
+// - Abaixo de 16: Baixo peso muito grave
+// - Entre 16.0 a 16.99: Baixo peso grave
+// - De 17 a 18.49: Baixo peso
+// - De 18.50 a 24.99: Peso normal
+// - De 25 a 29.99: Sobrepeso
+// - De 30 a 34.99: Obesidade grau I
+// - De 35 a 39.99: Obesidade grau II
+// - Maior ou igual a 40: Obesidade grau III
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prova IMC </title>
+</head>
+<body>
+    <script>
+        // Entrada
+        let nome = String(prompt('Digite o seu nome: '))
+        let peso = Number(prompt('Digite o seu peso: '))
+        let altura = Number(prompt('Digite sua altura: '))
+
+        // Processamento
+        let imc = peso / altura ** 2
+
+        // Saída
+        alert(`Seu IMC é igual: ${imc.toFixed(2)}`)
+        console.log(`Seu IMC é igual: ${imc.toFixed(2)}`)
+
+        if (imc < 16) {
+            alert('Você está com baixo peso muito grave')
+        } else if (imc < 16.99) {
+            alert('Você está com baixo peso grave')
+        } else if (imc < 18.49) {
+            alert('Você está com baixo peso')
+        } else if (imc < 24.99) {
+            alert('Você está com peso normal')
+        } else if (imc < 29.99) {
+            alert('Você está com sobrepeso.')
+        } else if (imc < 34.99) {
+            alert('Você está com obesidade grau I')
+        } else if (imc < 39.99) {
+            alert('Você está com obesidade II.')   
+        } else {
+            alert('Você está com obesidade III.')
+        }
+    </script>
+</body>
+</html>
